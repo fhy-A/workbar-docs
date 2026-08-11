@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">workbar</title>
+  <desc id="desc">workbar 圆形 wb 品牌标志</desc>
+  <circle cx="100" cy="100" r="98" fill="#FFFFFF"/>
+  <circle cx="100" cy="100" r="72" fill="#10131B"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#10131B" stroke-width="8"
+          stroke-linecap="round" stroke-dasharray="504 49" transform="rotate(-35 100 100)"/>
+  <circle cx="164" cy="41" r="6.5" fill="#10131B"/>
+  <text x="100" y="127" text-anchor="middle" font-family="Inter, Arial, sans-serif"
+        font-size="91" font-weight="760" letter-spacing="-7" fill="#FFFFFF">wb</text>
+</svg>

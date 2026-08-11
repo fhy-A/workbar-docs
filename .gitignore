@@ -1,0 +1,17 @@
+preview/node_modules/
+preview/index.html
+preview/preview-home.png
+
+# Generated documentation output
+.dist-build/
+dist/
+workbar-docs-*.tar.gz
+workbar-docs-*.tar.gz.sha256
+
+# Local environment and tool output
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db

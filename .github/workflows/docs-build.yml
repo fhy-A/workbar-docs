@@ -1,0 +1,53 @@
+name: Build documentation artifact
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Check and package
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: preview/package-lock.json
+
+      - name: Install locked dependencies
+        run: npm --prefix preview ci
+
+      - name: Build and validate documentation
+        run: npm --prefix preview run check
+
+      - name: Package documentation root
+        env:
+          ARCHIVE_NAME: workbar-docs-${{ github.sha }}.tar.gz
+        run: |
+          test -f dist/index.html
+          tar --directory dist --create --gzip --file "$ARCHIVE_NAME" .
+          sha256sum "$ARCHIVE_NAME" > "$ARCHIVE_NAME.sha256"
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: workbar-docs-${{ github.sha }}
+          path: |
+            workbar-docs-${{ github.sha }}.tar.gz
+            workbar-docs-${{ github.sha }}.tar.gz.sha256
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30

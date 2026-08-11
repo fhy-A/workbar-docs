@@ -1,0 +1,21 @@
+# workbar 文档
+
+- [文档首页](content/index.md)
+- 开始使用
+  - [快速开始](content/getting-started/quick-start.md)
+- 连接 AI 工具
+  - [使用 workbar Code](content/tools/workbar-code.md)
+  - [在 Claude Code 中使用 workbar](content/tools/claude-code.md)
+  - [连接其他兼容工具](content/tools/compatible-tools.md)
+- 账号与使用
+  - [管理 API 密钥](content/keys/manage-api-keys.md)
+  - [模型、分组与自动选择](content/models/models-and-auto-routing.md)
+  - [余额、价格与使用记录](content/billing/balance-pricing-and-usage.md)
+  - [账号与安全](content/account/account-and-security.md)
+- 开发者接口
+  - [API 接入概览](content/api/index.md)
+  - [OpenAI 兼容接口](content/api/openai-compatible.md)
+  - [Claude 兼容接口](content/api/claude-compatible.md)
+  - [Gemini 兼容接口](content/api/gemini-compatible.md)
+- 获取帮助
+  - [常见问题排查](content/troubleshooting/common-problems.md)

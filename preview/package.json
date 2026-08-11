@@ -1,0 +1,16 @@
+{
+  "name": "workbar-docs",
+  "private": true,
+  "scripts": {
+    "build": "node build-dist.cjs",
+    "build:preview": "node build.cjs",
+    "build:dist": "node build-dist.cjs",
+    "check": "node --check build.cjs && node --check build-dist.cjs && node --check site.js && node build-dist.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "marked": "^17.0.5"
+  }
+}
