@@ -2,6 +2,8 @@
 
 正文以 `content/` 中的 Markdown 为唯一内容源，图片和品牌资源位于 `assets/`。构建器会同时复用现有预览的视觉样式，生成可以独立部署到 `docs.workbar.ai` 的多页面静态站。
 
+服务器开发请先阅读 [`DEVELOPER_DEPLOYMENT.md`](DEVELOPER_DEPLOYMENT.md)；完整的 Nginx、DNS、TLS、缓存、安全头和回滚说明见 [`deploy/README.md`](deploy/README.md)。
+
 ## 安装依赖
 
 ```powershell
